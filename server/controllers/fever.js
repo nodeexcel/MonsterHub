@@ -218,7 +218,7 @@ export const postFever = async (req, res, next) => {
 
     //when argument is links, don't return anything at this moment
     if ("links" in req.query) {
-      
+
       //select all items with hot links
       var articles = await Article.findAll({
         where: {
@@ -384,8 +384,18 @@ function genUpdate(req_body_as) {
       return {
         starInd: 0
       };
+
+    case "autosaved":
+      return {
+        starInd: 1
+      };
+    case "delete":
+      return {
+        starInd: 0
+      };
+
     default:
-      return {}  
+      return {}
   }
 }
 

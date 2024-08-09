@@ -40,7 +40,7 @@ const getFeeds = async () => {
     return feeds;
   } catch (e) {
     console.log(
-      "Error fetching feeds from database " + e.message
+      "Error fetching feeds from database " + e.message +"Error path:" +e.path
     );
   }
 }

@@ -19,10 +19,6 @@ export const Feed = sequelize.define(
     url: {
       type: Sequelize.STRING
     },
-    rssUrl: {
-      type: Sequelize.STRING,
-      unique: true
-    },
     favicon: Sequelize.STRING,
     errorCount: {
       type: Sequelize.INTEGER,
